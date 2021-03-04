@@ -14,7 +14,7 @@
 
 -- Dumping database structure for database_log
 DROP DATABASE IF EXISTS `database_log`;
-CREATE DATABASE IF NOT EXISTS `database_log` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE IF NOT EXISTS `database_log` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `database_log`;
 
 -- Dumping structure for table database_log.antihack
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `antihack` (
   `player_location` varchar(255) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `item_bag_serial` (
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL,
   `instance` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `log_boss_kill` (
   `damage_elemental` bigint(20) DEFAULT NULL,
   `server` smallint(6) DEFAULT NULL,
   `first_hit` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `log_cash_shop` (
   `price_type` tinyint(4) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
   `gift` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `log_errtel_pentagram` (
   `result` tinyint(4) DEFAULT NULL,
   `pentagram_data` varchar(255) DEFAULT NULL,
   `errtel_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `log_item_buy` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `log_item_create` (
   `item` smallint(6) DEFAULT NULL,
   `level` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS `log_item_drop` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `log_item_loot` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `log_item_sell` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `log_jewel_drop` (
   `world` smallint(6) DEFAULT NULL,
   `x` smallint(6) DEFAULT NULL,
   `y` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `log_jewel_mix` (
   `mix_type` tinyint(4) DEFAULT NULL,
   `mix_id` tinyint(4) DEFAULT NULL,
   `mix_level` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -230,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `log_level_up` (
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL,
   `event_ground` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -250,7 +250,7 @@ CREATE TABLE IF NOT EXISTS `log_mix` (
   `result` tinyint(4) DEFAULT NULL,
   `item_data_before` varchar(255) DEFAULT NULL,
   `item_data_after` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -270,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `log_personal_store` (
   `player_data_02` varchar(255) DEFAULT NULL,
   `offstore` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -290,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `log_pvp` (
   `skill` varchar(255) DEFAULT NULL,
   `hp_damage` int(11) DEFAULT NULL,
   `sd_damage` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -310,7 +310,7 @@ CREATE TABLE IF NOT EXISTS `log_trade` (
   `player_data_02` varchar(255) DEFAULT NULL,
   `money` int(11) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -325,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `mix_recovery` (
   `player_data` varchar(255) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -340,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `reward_dungeon` (
   `player_data` varchar(255) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -353,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `reward_labyrinth_of_dimensions` (
   `category` tinyint(4) DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 

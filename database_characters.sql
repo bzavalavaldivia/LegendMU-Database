@@ -14,7 +14,7 @@
 
 -- Dumping database structure for database_characters
 DROP DATABASE IF EXISTS `database_characters`;
-CREATE DATABASE IF NOT EXISTS `database_characters` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE IF NOT EXISTS `database_characters` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `database_characters`;
 
 -- Dumping structure for table database_characters.account_buff
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `account_buff` (
   `duration` bigint(20) DEFAULT NULL,
   `flags` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`account_id`,`buff`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `account_cash_shop_gift` (
   `serial_cash_shop` int(11) DEFAULT NULL,
   `server` smallint(6) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `account_cash_shop_item` (
   `server` smallint(6) DEFAULT NULL,
   `gift` tinyint(4) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `account_data` (
   `cash_shop_discount_gp` tinyint(4) DEFAULT NULL,
   `cash_shop_discount_date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `account_warehouse` (
   `money` int(11) DEFAULT NULL,
   `password` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `arka_war_data` (
   `guild` int(11) NOT NULL,
   `attribute` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`,`guild`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `castle_siege_data` (
   `hunt_allowed` tinyint(4) DEFAULT NULL,
   `money` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`owner`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `castle_siege_guild` (
   `side` tinyint(4) NOT NULL,
   `score` int(11) DEFAULT NULL,
   PRIMARY KEY (`guild`,`side`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `castle_siege_npc` (
   `life_level` tinyint(4) DEFAULT NULL,
   `life` int(11) DEFAULT NULL,
   PRIMARY KEY (`npc`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `castle_siege_registered_guild` (
   `level` smallint(6) DEFAULT NULL,
   `level_master` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`guild`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `chaos_castle_survival_hall_of_fame` (
   `char_name` bigint(20) DEFAULT NULL,
   `score` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `chaos_castle_survival_ranking` (
   `char_id` int(11) NOT NULL,
   `score` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -199,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `character_buff` (
   `duration` bigint(20) DEFAULT NULL,
   `flags` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`buff`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `character_chat_block` (
   `char_id` int(11) NOT NULL,
   `blocked` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `character_date` (
   `id` int(11) NOT NULL,
   `date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -231,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `character_deleted` (
   `char_id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`account_id`,`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -243,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `character_event_count` (
   `count` tinyint(4) DEFAULT NULL,
   `day` tinyint(4) NOT NULL,
   PRIMARY KEY (`char_id`,`event_id`,`day`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -253,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `character_friend` (
   `char_id` int(11) NOT NULL,
   `friend_name` varchar(255) NOT NULL,
   PRIMARY KEY (`char_id`,`friend_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -287,7 +287,7 @@ CREATE TABLE IF NOT EXISTS `character_gameoption` (
   `button_bind_4` tinyint(4) DEFAULT NULL,
   `button_bind_5` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -302,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `character_gens` (
   `join_date` bigint(20) DEFAULT NULL,
   `left_date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`family`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -313,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `character_gens_kill` (
   `killed_id` int(11) DEFAULT NULL,
   `count` int(11) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -345,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `character_helper` (
   `buff_item_2` smallint(6) DEFAULT NULL,
   `buff_item_3` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -365,7 +365,7 @@ CREATE TABLE IF NOT EXISTS `character_hunting_record` (
   `killed_count` int(11) DEFAULT NULL,
   `earned_experience` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`world`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -425,7 +425,7 @@ CREATE TABLE IF NOT EXISTS `character_info` (
   `online` tinyint(4) DEFAULT NULL,
   `server_code` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`guid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -435,7 +435,7 @@ CREATE TABLE IF NOT EXISTS `character_item_delay` (
   `char_id` int(11) DEFAULT NULL,
   `item` smallint(6) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -452,7 +452,7 @@ CREATE TABLE IF NOT EXISTS `character_jewel_bingo` (
   `score3` int(11) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -464,7 +464,7 @@ CREATE TABLE IF NOT EXISTS `character_jewel_bingo_grid` (
   `slot` tinyint(4) DEFAULT NULL,
   `value` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -474,7 +474,7 @@ CREATE TABLE IF NOT EXISTS `character_kick` (
   `char_id` int(11) NOT NULL,
   `character_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -493,7 +493,7 @@ CREATE TABLE IF NOT EXISTS `character_labyrinth` (
   `goblin_state` tinyint(4) DEFAULT NULL,
   `day_first` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -504,7 +504,7 @@ CREATE TABLE IF NOT EXISTS `character_labyrinth_level` (
   `level` smallint(6) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -525,7 +525,7 @@ CREATE TABLE IF NOT EXISTS `character_labyrinth_zone` (
   `mission_count_4` int(11) DEFAULT NULL,
   `mission_count_5` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`idx`,`subidx`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -542,7 +542,7 @@ CREATE TABLE IF NOT EXISTS `character_mail` (
   `window_guid` int(11) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL,
   `opened` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -553,7 +553,7 @@ CREATE TABLE IF NOT EXISTS `character_majestic_stats` (
   `id` tinyint(4) NOT NULL,
   `level` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -566,7 +566,7 @@ CREATE TABLE IF NOT EXISTS `character_majestic_tree` (
   `id` smallint(6) NOT NULL,
   `level` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -579,7 +579,7 @@ CREATE TABLE IF NOT EXISTS `character_mini_bomb` (
   `total_score` int(11) DEFAULT NULL,
   `cdate` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -591,7 +591,7 @@ CREATE TABLE IF NOT EXISTS `character_mini_bomb_grid` (
   `value` tinyint(4) DEFAULT NULL,
   `status` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -603,7 +603,7 @@ CREATE TABLE IF NOT EXISTS `character_monster_soul` (
   `id` int(11) NOT NULL,
   `amount` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -618,7 +618,7 @@ CREATE TABLE IF NOT EXISTS `character_mu_roomy` (
   `special_card_count` tinyint(4) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -632,7 +632,7 @@ CREATE TABLE IF NOT EXISTS `character_mu_roomy_deck` (
   `number` tinyint(4) DEFAULT NULL,
   `state` tinyint(4) DEFAULT NULL,
   `play_slot` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -649,7 +649,7 @@ CREATE TABLE IF NOT EXISTS `character_numeric_baseball` (
   `strikes` varchar(255) DEFAULT NULL,
   `balls` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -665,7 +665,7 @@ CREATE TABLE IF NOT EXISTS `character_quest_evo` (
   `kill_count_4` int(11) DEFAULT NULL,
   `kill_count_5` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -678,7 +678,7 @@ CREATE TABLE IF NOT EXISTS `character_quest_guided` (
   `state` tinyint(4) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`quest`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -691,7 +691,7 @@ CREATE TABLE IF NOT EXISTS `character_quest_mu` (
   `objective` smallint(6) DEFAULT NULL,
   `date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`quest_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -704,7 +704,7 @@ CREATE TABLE IF NOT EXISTS `character_restriction` (
   `admin_name` varchar(255) DEFAULT NULL,
   `reason` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -716,7 +716,7 @@ CREATE TABLE IF NOT EXISTS `character_score` (
   `level` int(11) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -728,7 +728,7 @@ CREATE TABLE IF NOT EXISTS `character_skill` (
   `skill` smallint(6) NOT NULL,
   `skill_level` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`skill`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -739,7 +739,7 @@ CREATE TABLE IF NOT EXISTS `character_statistics` (
   `statistic_id` int(11) NOT NULL,
   `count` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`statistic_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -751,7 +751,7 @@ CREATE TABLE IF NOT EXISTS `character_warp_favorite_list` (
   `data` smallint(6) DEFAULT NULL,
   `warp_id` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -760,7 +760,7 @@ DROP TABLE IF EXISTS `crywolf_data`;
 CREATE TABLE IF NOT EXISTS `crywolf_data` (
   `state` tinyint(4) NOT NULL,
   PRIMARY KEY (`state`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -782,7 +782,7 @@ CREATE TABLE IF NOT EXISTS `event_arka_war_kill` (
   `world` smallint(6) DEFAULT NULL,
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -794,7 +794,7 @@ CREATE TABLE IF NOT EXISTS `event_arka_war_ranking` (
   `guild_id_02` int(11) DEFAULT NULL,
   `guild_name_02` varchar(255) DEFAULT NULL,
   `character_count` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -817,7 +817,7 @@ CREATE TABLE IF NOT EXISTS `event_castle_siege_kill` (
   `world` smallint(6) DEFAULT NULL,
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -828,7 +828,7 @@ CREATE TABLE IF NOT EXISTS `event_castle_siege_ranking` (
   `guild_name` varchar(255) DEFAULT NULL,
   `character_count` int(11) DEFAULT NULL,
   PRIMARY KEY (`guild_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -843,7 +843,7 @@ CREATE TABLE IF NOT EXISTS `event_castle_siege_time` (
   `guild_name` varchar(255) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   `time` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -854,7 +854,7 @@ CREATE TABLE IF NOT EXISTS `event_dungeon_instance` (
   `id` tinyint(4) DEFAULT NULL,
   `time` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -867,7 +867,7 @@ CREATE TABLE IF NOT EXISTS `event_jewel_bingo_ranking` (
   `score2` int(11) DEFAULT NULL,
   `score3` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -882,7 +882,7 @@ CREATE TABLE IF NOT EXISTS `event_labyrinth_league` (
   `league_score` int(11) DEFAULT NULL,
   `time` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`category`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -893,7 +893,7 @@ CREATE TABLE IF NOT EXISTS `event_labyrinth_schedule` (
   `state` tinyint(4) DEFAULT NULL,
   `start_date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -906,7 +906,7 @@ CREATE TABLE IF NOT EXISTS `event_mini_bomb_ranking` (
   `bombs_founded` tinyint(4) DEFAULT NULL,
   `bombs_failed` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -919,7 +919,7 @@ CREATE TABLE IF NOT EXISTS `event_mu_roomy_ranking` (
   `remain_card` tinyint(4) DEFAULT NULL,
   `remain_special_card` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -929,7 +929,7 @@ CREATE TABLE IF NOT EXISTS `event_numeric_baseball_ranking` (
   `char_id` int(11) NOT NULL,
   `score` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -940,7 +940,7 @@ CREATE TABLE IF NOT EXISTS `event_race_ranking` (
   `race` varchar(255) NOT NULL,
   `start` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`race`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -952,7 +952,7 @@ CREATE TABLE IF NOT EXISTS `event_ranking` (
   `char_id` int(11) NOT NULL,
   `score` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`event_id`,`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -968,7 +968,7 @@ CREATE TABLE IF NOT EXISTS `event_ranking_labyrinth` (
   `completed_missions` int(11) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -979,7 +979,7 @@ CREATE TABLE IF NOT EXISTS `event_scramble_ranking` (
   `word` varchar(255) DEFAULT NULL,
   `shuffle_word` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -989,7 +989,7 @@ CREATE TABLE IF NOT EXISTS `event_stage` (
   `event_id` tinyint(4) NOT NULL,
   `stage` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`event_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1004,7 +1004,7 @@ CREATE TABLE IF NOT EXISTS `guild_list` (
   `notice` varchar(255) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
   PRIMARY KEY (`guid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1018,7 +1018,7 @@ CREATE TABLE IF NOT EXISTS `guild_matching` (
   `class_type` smallint(6) DEFAULT NULL,
   `board_number` int(11) DEFAULT NULL,
   PRIMARY KEY (`guild_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1030,7 +1030,7 @@ CREATE TABLE IF NOT EXISTS `guild_members` (
   `char_id` int(11) NOT NULL,
   `ranking` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`guild_id`,`char_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1040,7 +1040,7 @@ CREATE TABLE IF NOT EXISTS `guild_score` (
   `guild_id` int(11) NOT NULL,
   `score` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`guild_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1081,7 +1081,7 @@ CREATE TABLE IF NOT EXISTS `item_data` (
   `expire_date` bigint(20) DEFAULT NULL,
   `flags` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`,`box`,`slot`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1158,7 +1158,7 @@ CREATE TABLE IF NOT EXISTS `item_pentagram_data` (
   `data_1` int(11) DEFAULT NULL,
   `data_2` int(11) DEFAULT NULL,
   `data_3` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1184,7 +1184,7 @@ CREATE TABLE IF NOT EXISTS `item_recovery` (
   `socket_bonus` tinyint(4) DEFAULT NULL,
   `flags` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id`,`item`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1195,7 +1195,7 @@ CREATE TABLE IF NOT EXISTS `monster_respawn` (
   `guid` smallint(6) NOT NULL,
   `date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`server`,`guid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1205,7 +1205,7 @@ CREATE TABLE IF NOT EXISTS `party` (
   `guid` smallint(6) NOT NULL,
   `server` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`guid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1216,7 +1216,7 @@ CREATE TABLE IF NOT EXISTS `party_member` (
   `party` smallint(6) DEFAULT NULL,
   `member` int(11) DEFAULT NULL,
   `position` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1231,7 +1231,7 @@ CREATE TABLE IF NOT EXISTS `serial_check` (
   `mac` varchar(50) DEFAULT NULL,
   `disk_serial` int(11) DEFAULT NULL,
   PRIMARY KEY (`serial`,`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1245,7 +1245,7 @@ CREATE TABLE IF NOT EXISTS `server_signal` (
   `data_2` int(11) DEFAULT NULL,
   `data_3` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1258,7 +1258,7 @@ CREATE TABLE IF NOT EXISTS `tormented_square_survival_hall_of_fame` (
   `char_name_2` varchar(255) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
   PRIMARY KEY (`char_id_1`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1272,7 +1272,7 @@ CREATE TABLE IF NOT EXISTS `tormented_square_survival_ranking` (
   `char_id_2` int(11) DEFAULT NULL,
   `char_name_2` varchar(255) DEFAULT NULL,
   `score` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -1283,7 +1283,7 @@ CREATE TABLE IF NOT EXISTS `tormented_square_survival_team` (
   `char_id_2` int(11) DEFAULT NULL,
   `score` int(11) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 

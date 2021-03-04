@@ -14,7 +14,7 @@
 
 -- Dumping database structure for database_login
 DROP DATABASE IF EXISTS `database_login`;
-CREATE DATABASE IF NOT EXISTS `database_login` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE IF NOT EXISTS `database_login` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `database_login`;
 
 -- Dumping structure for table database_login.accounts
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `account` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`guid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `accounts_allowed` (
   `guid` int(11) DEFAULT NULL,
   `server` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `accounts_banned` (
   `guid` int(11) DEFAULT NULL,
   `unban_date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `accounts_disconnect` (
   `server` smallint(6) DEFAULT NULL,
   `masive` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `accounts_security` (
   `mac` varchar(50) DEFAULT NULL,
   `disk_serial` int(11) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `accounts_status` (
   `disk_serial` int(11) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `accounts_validation` (
   `account_id` int(11) NOT NULL,
   `disk_serial` int(11) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `accounts_warning` (
   `disk_serial` int(11) DEFAULT NULL,
   `block_date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `block_diskserial` (
   `disk_serial` int(11) NOT NULL,
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`disk_serial`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `block_ip` (
   `ip` varchar(16) NOT NULL,
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ip`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `block_mac` (
   `mac` varchar(50) NOT NULL,
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`mac`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `character_notification` (
   `notification_id` varchar(45) DEFAULT NULL,
   `notification_data` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`server_group`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -177,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `item_serial` (
   `serial` int(11) DEFAULT NULL,
   `serial_shop` int(11) DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -187,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `master_pc` (
   `disk_serial` int(11) NOT NULL,
   `mac` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`disk_serial`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -206,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `server_list` (
   `default_y` smallint(6) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `world_server` (
   `server` smallint(6) NOT NULL,
   `world` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
